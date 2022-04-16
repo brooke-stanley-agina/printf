@@ -3,6 +3,9 @@
 
 /**
  * check_for_specifiers - checks if there is a valid format specifer
+ * @format: possible format specifier
+ *
+ * Return: pointer to valid function or NULL
 */
 
 
@@ -25,7 +28,7 @@ static int (*check_for_specifiers(const char *formart))(va_list)
 		{"R", print_R},
 		{NULL, NULL}
 	};
-	for (i = 0; p[i].t !=NULL; i++)
+	for (i = 0; p[i].t != NULL; i++)
 	{
 		if (*(p[i].t) == *format)
 		{
@@ -36,7 +39,7 @@ static int (*check_for_specifiers(const char *formart))(va_list)
 }
 
 /**
- * _printf - function for printing format 
+ * _printf - function for printing format
  * @format: list arguments for printing
  * Return: number of characters printed
  */
