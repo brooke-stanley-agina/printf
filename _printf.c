@@ -7,9 +7,7 @@
  *
  * Return: pointer to valid function or NULL
 */
-
-
-static int (*check_for_specifiers(const char *formart))(va_list)
+int (*check_for_specifiers(const char *formart))(va_list)
 {
 	unsigned int i;
 	print_t p[] = {
