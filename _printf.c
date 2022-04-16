@@ -43,46 +43,40 @@ int (*check_for_specifiers(const char *formart))(va_list)
  */
 int _printf(const char *format, ...)
 {
+	unsigned int i = 0, count = 0;
 	va_list ap;
 	int (*f)(va_list);
-	unsigned int i = 0, counter = 0;
 
 	if (format == NULL)
 		return (-1);
-
 	va_start(ap, format);
-	while (format && format[i])
+	while (format[i])
 	{
-		if (format[i] != '%')
+		for (; format[i] != '%' && format[i]; i++)
 		{
 			_putchar(format[i]);
-			counter++;
-			i++;
+			count++;
+		}
+		if (!format[i])
+			return (count);
+		f = check_for_specifiers(&format[i + 1]);
+		if (f != NULL)
+		{
+			count += f(ap);
+			i += 2;
 			continue;
 		}
+		if (!format[i + 1])
+			return (-1);
+		_putchar(format[i]);
+		count++;
+		if (format[i + 1] == '%')
+			i += 2;
 		else
-		{
-			if (format[i + 1] == '%')
-			{
-				_putchar('%');
-				counter++;
-				i += 2;
-				continue;
-			}
-			else
-			{
-				f = check_for_specifiers(&format[i + 1]);
-				if (f == NULL)
-					return (-1);
-				i += 2;
-				counter += f(ap);
-				continue;
-			}
-		}
-		i++;
+			i++;
 	}
 	va_end(ap);
-	return (counter);
+	return (count);
 }
 
 
