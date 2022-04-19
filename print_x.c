@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * print-x - function prints an ascii char value
+ * print_x - function prints an ascii char value
  * lowercase hexadecimal
  * @x: char to print
  * Return: number of printed characters
