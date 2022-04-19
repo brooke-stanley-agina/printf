@@ -8,7 +8,7 @@ int print_o(va_list o)
 {
 	unsigned int a[11];
 	unsigned int j = 1, m = 1073741824, n, sum = 0;
-	int counter;
+	int counter = 0;
 
 	n = va_arg(o, unsigned int);
 	a[0] = n / m;
