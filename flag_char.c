@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stdbool.h>
+#include <stdlib.h>
 /**
  * get_flag - turns on flags if _printf finds
  * a flag modifier in the format string

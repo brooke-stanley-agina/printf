@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_b - function prints the unsigned int  argument converted to binary 
+ * print_b - function prints the unsigned int  argument converted to binary
  * @b: unsigned int to print
  * Return: number of printed digits
  */

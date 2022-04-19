@@ -11,7 +11,7 @@ int print_S(va_list S)
 	int counter = 0;
 	char *str = va_arg(S, char *);
 
-	if(str == NULL)
+	if (str == NULL)
 		str = "(null)";
 	for (; str[i]; i++)
 	{
