@@ -1,4 +1,5 @@
 #include "main.h"
+#include <unistd.h>
 /**
  * print_S - function prints a string & non printable characters ASCII values
  * @S: print string
