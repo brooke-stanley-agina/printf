@@ -9,12 +9,12 @@ typedef struct print
     int (*f)(va_list);
 }print_t;
 
-typedef struct modifiers
-{
-	_Bool plus;
-	_Bool space;
-	_Bool hash;
-}mods;
+// typedef struct modifiers
+// {
+// 	_Bool plus;
+// 	_Bool space;
+// 	_Bool hash;
+// }mods;
 
 int _printf(const char *format, ...);
 int _putchar(char c);
