@@ -1,31 +1,18 @@
 #include "main.h"
+#include <unistd.h>
 /**
- * print_S - function prints a string & non printable characters ASCII values
- * @S: print string
- * Return: number of printed characters
+ * print_s - function prints a string
+ * @s: string to print
+ * Return: i
  */
-int print_S(va_list S)
+int print_s(va_list s)
 {
-	unsigned int i = 0;
-	int counter = 0;
-	char *str = va_arg(S, char *);
+	char *str = va_arg(s, char *);
+	int i = 0;
 
-	if(str == NULL)
+	if (str == NULL)
 		str = "(null)";
-	for (; str[i]; i++)
-	{
-		if (str[i] < 32 || str[i] >= 127)
-		{
-			_putchar('\\');
-			_putchar('x');
-			counter += 2;
-			counter += print_x(S);
-		}
-		else
-		{
-			_putchar(str[i]);
-			counter++;
-		}
-	}
-	return (counter);
+	while (str[i])
+		_putchar(str[i++]);
+	return (i);
 }
