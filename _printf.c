@@ -1,8 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
 #include <stdarg.h>
-#include <unistd.h>
-
 
 /**
  * check_for_specifiers - checks if there is a valid format specifer
@@ -10,21 +8,6 @@
  *
  * Return: pointer to valid function or NULL
 */
-
-
-/**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- *
- * Return: On Success 1
- * On error, -1 is returned, and errno is set appropriately.
- */
-
-/* Definition of _putchar */
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
 int (*check_for_specifiers(const char *format))(va_list)
 {
 	int i = 0;
