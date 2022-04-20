@@ -1,20 +1,10 @@
 #include "main.h"
 #include <stdlib.h>
-
-
 /**
  * print_d - function prints a decimal base 10
  * @i: base 10 integer to print
  * Return: number of printed digits
  */
-
-
-
-
-
-
-
-
 int print_d(va_list i)
 {
 	int a[10];
