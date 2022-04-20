@@ -1,9 +1,25 @@
 #include "main.h"
+#include <unistd.h>
 /**
  * print_o - function that prints an unsigned int in octal notation
  * @o: unsigned int to print
  * Return: number of printed digits
  */
+
+
+/**
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ *
+ * Return: On Success 1
+ * On error, -1 is returned, and errno is set appropriately.
+ */
+
+/* Definition of _putchar */
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
+}
 int print_o(va_list o)
 {
 	unsigned int a[11];

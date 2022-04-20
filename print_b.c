@@ -1,9 +1,25 @@
 #include "main.h"
+#include <unistd.h>
 /**
  * print_b - function prints the unsigned int  argument converted to binary
  * @b: unsigned int to print
  * Return: number of printed digits
  */
+
+
+/**
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ *
+ * Return: On Success 1
+ * On error, -1 is returned, and errno is set appropriately.
+ */
+
+/* Definition of _putchar */
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
+}
 int print_b(va_list b)
 {
 	unsigned int n, m = 2147483648, j = 1, sum = 0;

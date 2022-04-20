@@ -1,10 +1,26 @@
 #include "main.h"
 #include <stdlib.h>
+#include <unistd.h>
 /**
  * print_p - function prints an address
  * @p: address to print
  * Return: number of printed characters
  */
+
+
+/**
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ *
+ * Return: On Success 1
+ * On error, -1 is returned, and errno is set appropriately.
+ */
+
+/* Definition of _putchar */
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
+}
 int print_p(va_list p)
 {
 	int counter = 0;

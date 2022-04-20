@@ -1,11 +1,27 @@
 #include "main.h"
 #include <stdlib.h>
+#include <unistd.h>
 /**
  * print_x - function prints an ascii char value
  * lowercase hexadecimal
  * @x: char to print
  * Return: number of printed characters
  */
+
+
+/**
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ *
+ * Return: On Success 1
+ * On error, -1 is returned, and errno is set appropriately.
+ */
+
+/* Definition of _putchar */
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
+}
 int print_x(va_list x)
 {
 	unsigned int a[8];

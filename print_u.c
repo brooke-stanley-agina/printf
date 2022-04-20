@@ -1,10 +1,26 @@
 #include "main.h"
 #include <stdlib.h>
+#include <unistd.h>
 /**
  * print_u - A function that prints an unsigned integer
  * @u: unsigned int to print
  * Return: number of printed digits
  */
+
+
+/**
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ *
+ * Return: On Success 1
+ * On error, -1 is returned, and errno is set appropriately.
+ */
+
+/* Definition of _putchar */
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
+}
 int print_u(va_list u)
 {
 	unsigned int a[10];
