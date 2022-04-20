@@ -3,12 +3,17 @@
 
 #include <stdarg.h>
 
-
+/**
+ * struct print - structure for printing various types
+ * @t: type to print
+ * @f: fuction to point
+ **/
 typedef struct print
 {
-    char *t;
-    int (*f)(va_list);
-}print_t;
+char *t;
+int (*f)(va_list);
+} print_t;
+
 
 
 
@@ -37,5 +42,4 @@ int print_add(va_list add);
 int print_less(va_list less);
 int print_space(va_list space);
 int print_sharp(va_list sharp);
-
-#endif 
+#endif
