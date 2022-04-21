@@ -23,7 +23,7 @@ int print_u(va_list u)
 		sum += a[j];
 		if (sum || j == 9)
 		{
-			putchar('0' + a[j]);
+			_putchar('0' + a[j]);
 			counter++;
 		}
 	}

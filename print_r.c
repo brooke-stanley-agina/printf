@@ -17,7 +17,7 @@ int print_r(va_list r)
 		i++;
 	for (i -= 1; i >= 0; i--)
 	{
-		putchar(str[i]);
+		_putchar(str[i]);
 		counter++;
 	}
 	return (counter);

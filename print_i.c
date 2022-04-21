@@ -14,7 +14,7 @@ int print_i(va_list i)
 	if (n < 0)
 	{
 		n *= -1;
-		putchar('-');
+		_putchar('-');
 		counter++;
 	}
 	a[0] = n / m;
@@ -30,7 +30,7 @@ int print_i(va_list i)
 		sum += a[j];
 		if (sum != 0 || j == 9)
 		{
-			putchar('0' + a[j]);
+			_putchar('0' + a[j]);
 			counter++;
 		}
 	}

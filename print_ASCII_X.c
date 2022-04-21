@@ -27,9 +27,9 @@ int print_X(va_list X)
 		if (sum || j == 7)
 		{
 			if (a[j] < 10)
-				putchar('0' + a[j]);
+				_putchar('0' + a[j]);
 			else
-				putchar('0' + diff + a[j]);
+				_putchar('0' + diff + a[j]);
 			counter++;
 		}
 	}

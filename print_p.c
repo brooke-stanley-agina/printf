@@ -18,13 +18,13 @@ int print_p(va_list p)
 	{
 		for (; str[i]; i++)
 		{
-			putchar(str[i]);
+			_putchar(str[i]);
 			counter++;
 		}
 		return (counter);
 	}
-	putchar('0');
-	putchar('x');
+	_putchar('0');
+	_putchar('x');
 	counter = 2;
 
 	a[0] = n / m;

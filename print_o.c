@@ -22,7 +22,7 @@ int print_o(va_list o)
 		sum += a[j];
 		if (sum || j == 10)
 		{
-			putchar('0' + a[j]);
+			_putchar('0' + a[j]);
 			counter++;
 		}
 	}
