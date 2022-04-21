@@ -17,14 +17,14 @@ int print_S(va_list S)
 	{
 		if (str[i] < 32 || str[i] >= 127)
 		{
-			_putchar('\\');
-			_putchar('x');
+			putchar('\\');
+			putchar('x');
 			counter += 2;
 			counter += print_x(S);
 		}
 		else
 		{
-			_putchar(str[i]);
+			putchar(str[i]);
 			counter++;
 		}
 	}

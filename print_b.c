@@ -23,7 +23,7 @@ int print_b(va_list b)
 		sum += a[j];
 		if (sum || j == 31)
 		{
-			_putchar('0' + a[j]);
+			putchar('0' + a[j]);
 			counter++;
 		}
 	}

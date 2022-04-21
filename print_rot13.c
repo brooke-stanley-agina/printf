@@ -22,14 +22,14 @@ int print_R(va_list R)
 		{
 			if (in[j] == str[i])
 			{
-				_putchar(out[j]);
+				putchar(out[j]);
 				counter++;
 				break;
 			}
 		}
 		if (!in[j])
 		{
-			_putchar(str[i]);
+			putchar(str[i]);
 			counter++;
 		}
 	}

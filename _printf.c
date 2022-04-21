@@ -41,7 +41,7 @@ int (*check_for_specifiers(const char *format))(va_list)
  * @format: list arguments for printing
  * Return: number of characters printed
  */
-int _printf(const char *format, ...)
+int printf(const char *format, ...)
 {
 	unsigned int i = 0, count = 0;
 	va_list ap;
@@ -54,7 +54,7 @@ int _printf(const char *format, ...)
 	{
 		for (; format[i] != '%' && format[i]; i++)
 		{
-			_putchar(format[i]);
+			putchar(format[i]);
 			count++;
 		}
 		if (!format[i])
@@ -68,7 +68,7 @@ int _printf(const char *format, ...)
 		}
 		if (!format[i + 1])
 			return (-1);
-		_putchar(format[i]);
+		putchar(format[i]);
 		count++;
 		if (format[i + 1] == '%')
 			i += 2;
